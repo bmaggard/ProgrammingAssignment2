@@ -4,9 +4,15 @@
 ## so that we don' hafta do all that math again!
 ## Save them CPU cycles!  Save the planet!
 
-makeCacheMatrix <- function(x = matrix()) {
+## The code herein was largely copied from the 
+## "Caching the Mean of a Vector" example 
+## R Programming course by Roger D. Peng, PhD, Jeff Leek, PhD, Brian Caffo, PhD
+## delivered by Coursera, Inc 
+
+
 ## This function creates a special "matrix" object
 ## that can cache its inverse.
+makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
         x <<- y
